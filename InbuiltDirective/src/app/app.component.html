@@ -1,0 +1,51 @@
+ <h1>Demonstration of structural directive</h1>
+
+<!-- use of ngIf in case of harfcoded value -->
+<h1 *ngIf = false>You select a Nonveg Menu</h1> <!-- true-->
+<h1 *ngIf = true> Your select a Veg Menu</h1>
+
+<!--We can also use below syntax for if else -->
+<div *ngIf = "nonveg; then ifblock; else elseblock">Select </div>
+
+<ng-template #ifblock>
+  <h1>Please consider below nonveg menu options</h1>
+  <h2>Chicken tikka</h2>
+  <h2>Butter Chicken</h2>
+  <h2>Chicken Biryani</h2>
+</ng-template>
+
+<ng-template #elseblock>
+  <h1>Please consider below veg menu options</h1>
+  <h2>Dal Makhani</h2>
+  <h2>Dal Tadaka</h2>
+  <h2>Veg Biryani</h2>
+</ng-template>
+
+<h1 style="background-color: blueviolet;"> Demonstration of ngFor</h1>
+<div *ngFor = "let value of technology">
+  <h2>{{value}}</h2>
+</div>
+
+<h1>Demonstration of ngSwitch</h1>
+<div>
+  <div [ngSwitch] = "Batch">
+    <div *ngSwitchCase = "'PPA'">
+      <h2>You select PPA Batch</h2>
+    </div>
+    <div *ngSwtichCase = "'LB'">
+      <h2>You select LB batch</h2>
+    </div>
+    <div *ngSwitchCase = "'Python'">
+      <h2>You select Python batch</h2>
+    </div>
+    <div *ngSwitchDefault>
+      <h2>You select wrong option</h2>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<router-outlet></router-outlet>

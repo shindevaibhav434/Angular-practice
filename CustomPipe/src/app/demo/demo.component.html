@@ -1,0 +1,31 @@
+<h1>Inside Demo component</h1>
+
+<div [class] = "'myColor'">
+    <h1>Pipes for string</h1>
+    <h3>{{name}}</h3>
+    <h3>{{name | lowercase}}</h3>
+    <h3>{{name | uppercase}}</h3>
+    <h3>{{name | titlecase}}</h3>
+    <h3>{{name | slice :10}}</h3>
+</div>
+
+<div [class] = "'myColor2'">
+    <h1>Pipes for JSON output</h1>
+    <h2>{{Book | json}}</h2>
+</div>
+
+<h1>Pipes for date</h1>
+<h2>{{today}}</h2>
+<h2>{{today | date}}</h2>
+<h2>{{today | date : 'short'}}</h2>
+<h2>{{today | date : 'shortDate'}}</h2>
+<h2>{{today | date : 'shortTime'}}</h2>
+
+<h1>Use Of Custom Pipe</h1>
+<h2>{{'Demo' | marvellous : "PPA" : "LB" }}</h2>
+<h2>{{'Demo' | marvellous : "Angular" }}</h2>
+
+<div [class] = "'myColor'">
+    <h1>USE OF INFOSYSTEMS PIPE</h1>
+    <h1>{{'Display' | infosystems : 24 : "Vaibhav"}}</h1>
+</div>

@@ -1,0 +1,44 @@
+<h1>Demonstration of ngIf</h1>
+
+<h1 *ngIf = true>You select a veg menu</h1>
+<h1 *ngIf = false>You select a non veg menu</h1>
+
+<div *ngIf = "veg; then ifblock; else elseblock"></div>
+
+<ng-template #ifblock>
+  <h1>Please consider below veg menu</h1>
+  <h2>Dal Makhani</h2>
+  <h2>Dal Tadaka</h2>
+  <h2>Veg Biryani</h2>
+</ng-template>
+
+<ng-template #elseblock>
+  <h1>Please consider below nonveg menu options</h1>
+  <h2>Chicken tikka</h2>
+  <h2>Butter Chicken</h2>
+  <h2>Chicken Biryani</h2>
+</ng-template>
+
+<h1>Demonstration of ngFor</h1>
+<div *ngFor = "let noOf of no is">
+<h2>{{noOf}}</h2>
+</div>
+
+<h1>Demonstration of ngSwitch</h1>
+<div>
+  <div [ngSwitch] = "month">
+    <div *ngSwitchCase = "'January'">
+      <h2>You select January</h2>
+    </div>
+    <div *ngSwitchCase = "'February'">
+      <h2>You select February</h2>
+    </div>
+    <div *ngSwitchCase = "'March'">
+      <h2>You select March</h2>
+    </div>
+    <div *ngSwitchDefault>
+      <h2>You select wrong option</h2>
+    </div>
+  </div>
+</div>
+

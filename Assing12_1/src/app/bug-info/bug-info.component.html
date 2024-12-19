@@ -1,0 +1,37 @@
+<br>
+<div>
+    <form>
+        <label>Date and time You first notices bug*</label>
+    </form>
+</div>
+
+<mat-form-field>
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button mat-raised-button (click)="picker.open()">Open</button>
+<br><br>
+<label>Impact*</label>
+<br>
+  <mat-form-field>
+    <mat-select disableRipple>
+      <mat-option value="1">Low</mat-option>
+      <mat-option value="2">High</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br>
+
+  <label>Detailed Explanation of bug*</label>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput #message>
+      <mat-hint align="end">{{message.value.length}}</mat-hint>
+    </mat-form-field>
+  </form>
+  
+  
+  
